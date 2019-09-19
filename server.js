@@ -59,5 +59,3 @@ app.get('/', (req, res) => {
 app.get("/api/v1/", function (req, res) {
 	res.sendFile(__dirname + "/public/index.html");
 });
-
-console.log(`REST API launched on: ${port}`);

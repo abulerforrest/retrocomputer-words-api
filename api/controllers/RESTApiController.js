@@ -5,7 +5,6 @@ const Word = require('../models/word');
 exports.getAllWords = (req, res) => {
 	Word.find()
 	.then(word => {
-		console.log(word)
 		res.status(200).json({word});
 	}).catch(err => {
 		res.status(500).json({err});
