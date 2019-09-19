@@ -22,7 +22,7 @@ mongoose.Promise = global.Promise;
 
 // Connect string to MongoDB
 const mongoConnect = 
-`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PW}@cluster0-6cls4.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`;
+`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PW}@${process.env.CLUSTER}/${process.env.DB_NAME}?retryWrites=true&w=majority`;
 
 mongoose.connect(mongoConnect,
 	{
