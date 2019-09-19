@@ -29,16 +29,16 @@ With nodemon you will be able to see any errors in the console.
 ### Endpoints
 
 #### [GET] api/v1/words/all &#8594; Get all words
-#### [GET] api/v1//words/limit/:limit &#8594; Get words by limit [number 1-14476]</p>
-#### [GET] api/v1//words/random/all &#8594; Get all words in random order</p>
-#### [GET] api/v1//words/random/:limit &#8594; Get random words by limit [number 1-14476]</p>
-#### [GET] api/v1/words/id/:id &#8594; Get a specific word by id</p>
+#### [GET] api/v1//words/limit/:limit &#8594; Get words by limit [number 1-14476]
+#### [GET] api/v1//words/random/all &#8594; Get all words in random order
+#### [GET] api/v1//words/random/:limit &#8594; Get random words by limit [number 1-14476]
+#### [GET] api/v1/words/id/:id &#8594; Get a specific word by id
 
 ### Live URL Test
 
 The API has been deployed to Heroku hosting,
 
-Feel free to use it, at this moment it doesn't need any authentication:
+Feel free to use it, at this moment it doesn't need any authentication:<br />
 https://retrocomputer-words-api.herokuapp.com/
 
 ## Built With
@@ -59,8 +59,6 @@ Please read [CONTRIBUTING.md] for details on the code of conduct, and the proces
 
 ## Versioning
 
----
-
 ## Authors
 
 * **Alexander Bulér Forrest** - *Initial work* - [abulerforrest](https://github.com/abulerforrest)
@@ -70,5 +68,3 @@ Please read [CONTRIBUTING.md] for details on the code of conduct, and the proces
 This project is licensed under the GNU AGPLv3 License - see [AGPLv3](https://choosealicense.com/licenses/agpl-3.0/)
 
 ## Acknowledgments
-
----
