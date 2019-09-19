@@ -1,7 +1,7 @@
 // WordModel
 const Word = require('../models/word');
 
-// get all words
+// Get all words
 exports.getAllWords = (req, res) => {
 	Word.find()
 	.then(word => {
@@ -12,8 +12,9 @@ exports.getAllWords = (req, res) => {
 	});
 };
 
-// get words by limit
+// Get words by limit
 exports.getWordsByLimit = (req, res) => {
+
 	const limit = Number(req.params.limit);
 
 	if(limit === 0) {
@@ -28,7 +29,7 @@ exports.getWordsByLimit = (req, res) => {
 	}
 };
 
-// get word by object id
+// Get word by object id
 exports.getWordsById = (req, res) => {
 
 	Word.findById(req.params.id)
@@ -40,7 +41,9 @@ exports.getWordsById = (req, res) => {
 
 };
 
+// Get random words by limit
 exports.getRandomWords = (req, res) => {
+
 	const limit = Number(req.params.limit);
 
 	Word.countDocuments().exec(function (err, totalCount) {
@@ -56,6 +59,7 @@ exports.getRandomWords = (req, res) => {
 	});
 };
 
+// Get all random words
 exports.getAllRandomWords = (req, res) => {
 
 	Word.countDocuments().exec(function (err, totalCount) {

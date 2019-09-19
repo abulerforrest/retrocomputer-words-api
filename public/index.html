@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>RetroComputer Words REST API</title>
+		<meta name="description" content="A simple REST API serving a large collection of Retro Computer type words.">
+		<meta name="author" content="maintained by Alexander Bulér Forrest (abulerforrest - https://www.github.com/abulerforrest)">
+		<link rel="shortcut icon" type="image/png" href="/styles/favicon.png"/>
+		<link rel="stylesheet" type="text/css"   href="/styles/index.css">
+	</head>
+	
+	<body>
+		<div class="heading">RetroComputer Words API</div>
+		<p>
+			V1 | maintained by <a href="https://www.github.com/abulerforrest">github.com/abulerforrest</a>
+		</p>
+		<h2>
+			Description
+		</h2>
+		<div class="descriptionText">
+			This is a simple REST API containing a big collection of Retro Computer Words (11474 words) which I've gathered from text of various old 80's computer magazines, examples:
+			<u>Antic, Compute!</u> <u>Analog Computing</u> <u>Video And Arcade Games</u> <u>Hi-Res Magazine</u> (source: <a href="https://www.atarimagazines.com">https://www.atarimagazines.com</a>) and more.
+			I also gathered text from classic Nintendo and Atari games lists as as well from Wikipedia pages regarding computer technology.
+		</div>
+		<h2>
+			Endpoints
+		</h2>
+		<p>[GET] api/v1/words/all &#8594; GET ALL WORDS</p>
+		<p>[GET] api/v1//words/limit/:limit &#8594; GET WORDS BY LIMIT [number 1-14476]</p>
+		<p>[GET] api/v1//words/random/all &#8594; GET ALL WORDS BY RANDOM</p>
+		<p>[GET] api/v1//words/random/:limit &#8594; GET RANDOM WORDS BY LIMIT [number 1-14476]</p>
+		<br />
+		<div class="info">
+			Retruns the selected number of JSON word objects "word": [{ "_id":"{OBJECT_ID}","word":"{WORD}" }]"
+		</div>
+	</body>
+</html>

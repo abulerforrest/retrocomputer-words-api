@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One&display=swap');
+
+@keyframes text-flicker-in-glow {
+	0% {
+	  opacity: 0;
+	}
+	10% {
+	  opacity: 0;
+	  text-shadow: none;
+	}
+	10.1% {
+	  opacity: 1;
+	  text-shadow: none;
+	}
+	10.2% {
+	  opacity: 0;
+	  text-shadow: none;
+	}
+	20% {
+	  opacity: 0;
+	  text-shadow: none;
+	}
+	20.1% {
+	  opacity: 1;
+	}
+	20.6% {
+	  opacity: 0;
+	  text-shadow: none;
+	}
+	30% {
+	  opacity: 0;
+	  text-shadow: none;
+	}
+	30.1% {
+	  opacity: 1;
+	}
+	30.5% {
+	  opacity: 1;
+	}
+	30.6% {
+	  opacity: 0;
+	  text-shadow: none;
+	}
+	45% {
+	  opacity: 0;
+	  text-shadow: none;
+	}
+	45.1% {
+	  opacity: 1;
+	}
+	50% {
+	  opacity: 1;
+	}
+	55% {
+	  opacity: 1;
+	}
+	55.1% {
+	  opacity: 0;
+	  text-shadow: none;
+	}
+	57% {
+	  opacity: 0;
+	  text-shadow: none;
+	}
+	57.1% {
+	  opacity: 1;
+	}
+	60% {
+	  opacity: 1;
+	}
+	60.1% {
+	  opacity: 0;
+	  text-shadow: none;
+	}
+	65% {
+	  opacity: 0;
+	  text-shadow: none;
+	}
+	65.1% {
+	  opacity: 1;
+	}
+	75% {
+	  opacity: 1;
+	}
+	75.1% {
+	  opacity: 0;
+	  text-shadow: none;
+	}
+	77% {
+	  opacity: 0;
+	  text-shadow: none;
+	}
+	77.1% {
+	  opacity: 1;
+	}
+	85% {
+	  opacity: 1;
+	}
+	85.1% {
+	  opacity: 0;
+	  text-shadow: none;
+	}
+	86% {
+	  opacity: 0;
+	  text-shadow: none;
+	}
+	86.1% {
+	  opacity: 1;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+
+body {
+	-webkit-user-select: none;
+	user-select: none;
+	letter-spacing: 0.4px;
+	background-image: linear-gradient(
+		to right top,
+		#111011,
+		#1c1b1d,
+		#25252a,
+		#2c3037,
+		#333c44);
+	font-family: 'Roboto', sans-serif;
+	margin-top: 60px;
+	margin-left: 60px;
+	color: white;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.heading {
+	white-space: nowrap;
+	font-family: 'Fjalla One', sans-serif;
+	text-transform: uppercase;
+	color: white;
+	font-size: 70px;
+	margin-bottom: 10px;
+	text-shadow:
+		0 0 5px #fff,
+		0 0 10px #fff,
+		0 0 15px #fff,
+		0 0 20px rgb(0, 163, 213),
+		0 0 35px rgb(3, 195, 238),
+		0 0 40px rgb(3, 195, 238),
+		0 0 50px rgb(3, 195, 238),
+		0 0 75px rgb(3, 195, 238);
+	-webkit-animation: text-flicker-in-glow 2s linear both;
+	animation: text-flicker-in-glow 2s linear both;
+	-webkit-filter: blur(0);
+}
+.heading:hover {
+	filter: blur(2px);
+}
+
+.descriptionText {
+	width: 690px;
+	font-size: 16px !important;
+	margin-bottom: 20px;
+	line-height: 19px;
+}
+
+.info {
+	border: 4px solid rgb(3, 195, 238);
+	width: 500px;
+	padding: 8px 25px 8px 25px;
+
+}
+
+p {
+	white-space: nowrap;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:hover {
+	text-decoration: underline;
+	text-decoration-color: rgb(3, 195, 238);
+}
+
+h2 {
+	font-family: 'Fjalla One', sans-serif;
+	white-space: nowrap;
+	letter-spacing: 3px;
+	font-size: 25px;
+	text-transform: uppercase;
+}

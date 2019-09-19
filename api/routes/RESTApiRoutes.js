@@ -3,15 +3,38 @@ const router = express.Router();
 
 const apiController = require("../controllers/RESTApiController");
 
-const {check, validationResult} = require('express-validator');
+const {
+	check,
+	validationResult
+} = require('express-validator');
 
+const maxRequestNumberValue = 14476;
+
+// Middleware validation for routes
+const validationRandom = [
+	check("limit", "Error: The requested number value is too long!").isLength({ max: 5}),
+	check("limit", "Error: The requested number size is not valid!").custom((value, { req }) => {
+		return value <= maxRequestNumberValue;
+	}),
+	check("limit", "Error: Must be a number").isNumeric()
+];
+
+const validationLimit = [
+	check("limit", "Error: The requested number value is too long!").isLength({ max: 5}),
+	check("limit", "Error: The requested number size is not valid!").custom((value, { req }) => {
+		return value <= maxRequestNumberValue;
+	}),
+	check("limit", "Error: The expected limit value is a number").isNumeric()
+];
+
+// Routes
 router.get('/all', apiController.getAllWords);
 router.get('/id/:id', apiController.getWordsById);
 
-router.get('/random/all',apiController.getAllRandomWords);
+router.get('/random/all', apiController.getAllRandomWords);
 
 router.get('/random/:limit', [
-	check('limit', 'Error: The expected value is a number or "all"!').isNumeric()
+	...validationRandom
 ],
 function (req, res) {
 
@@ -26,9 +49,9 @@ function (req, res) {
 });
 
 router.get('/limit/:limit', [
-	check('limit', 'Error: The expected limit value is a number!').isNumeric()
+	...validationLimit
 ],
-function (req, res) {
+(req, res) => {
 
 	const errors = validationResult(req);
 
