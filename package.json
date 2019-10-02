@@ -1,7 +1,7 @@
 {
   "name": "retrocomputerwords-api",
   "version": "0.0.1",
-  "description": "A simple API which returns Retro Computer type words.",
+  "description": "A simple REST API which returns Retro Computer type words.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

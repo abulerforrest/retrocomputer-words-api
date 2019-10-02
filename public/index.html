@@ -5,36 +5,93 @@
 		<meta charset="utf-8">
 
 		<title>RetroComputer Words REST API</title>
-		<meta name="description" content="A simple REST API serving a large collection of Retro Computer type words.">
+		<meta name="description" content="A simple REST API serving a huge collection of Retro Computer type words.">
 		<meta name="author" content="maintained by Alexander Bulér Forrest (abulerforrest - https://www.github.com/abulerforrest)">
-		<link rel="shortcut icon" type="image/png" href="/styles/favicon.png"/>
+		<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" type="image/png" href="/styles/favicon.ico"/>
 		<link rel="stylesheet" type="text/css"   href="/styles/index.css">
 	</head>
 	
 	<body>
 		<div class="heading">RetroComputer Words API</div>
 		<p>
-			V1 | maintained by <a href="https://www.github.com/abulerforrest">github.com/abulerforrest</a>
+			V1 | maintained by <a href="https://www.github.com/abulerforrest">github.com/abulerforrest</a> <div class="profilePic"></div>
 		</p>
-		<h2>
-			Description
-		</h2>
+
 		<div class="descriptionText">
-			This is a simple REST API containing a big collection of Retro Computer Words (14476 words) which I've gathered from text of various old 80's computer magazines, examples:
-			<u>Antic, Compute!</u> <u>Analog Computing</u> <u>Video And Arcade Games</u> <u>Hi-Res Magazine</u> (source: <a href="https://www.atarimagazines.com">https://www.atarimagazines.com</a>) and more.
-			I also gathered text from classic Nintendo and Atari games lists as as well from Wikipedia pages regarding computer technology.
+			This is a simple <span class="bold">REST API</span> containing a huge collection of Retro Computer Words (14476 words) which I've gathered from text of various old 80's Atari magazines, examples:
+			<i>Antic</i>, <i>Compute!</i>, <i>Analog Computing Video And Arcade Games</i>, <i>Hi-Res Magazine</i>, <i>ROM Magazine</i> etc. <br />(Source: <a href="https://www.atarimagazines.com">https://www.atarimagazines.com</a>)
+			I've also crawled words from video game lists such as classic Nintendo, Atari games and from Wikipedia pages regarding computer technology/science.
+			<br/><br/>
+			<span class="bold">So, why the effort setting up this API?</span>
+			<br /><br />
+			I'm currently working on a game called <a href="https://github.com/abulerforrest/wordrazer">Word Razer</a> which is a retro style word game that will use this API in order to serve its random words in the game.
 		</div>
 		<h2>
-			Endpoints
+			API Endpoints
 		</h2>
-		<p>[GET] api/v1/words/all &#8594; GET ALL WORDS</p>
-		<p>[GET] api/v1//words/limit/:limit &#8594; GET WORDS BY LIMIT [number 1-14476]</p>
-		<p>[GET] api/v1//words/random/all &#8594; GET ALL WORDS BY RANDOM</p>
-		<p>[GET] api/v1//words/random/:limit &#8594; GET RANDOM WORDS BY LIMIT [number 1-14476]</p>
-		<p>[GET] api/v1/words/id/:id &#8594; GET A SPECIFIC WORD BY ID</p>
-		<br />
+		<div id="endpointsContainer">
+			<div class="endpoint">
+				<div class="req">
+					[GET]
+				</div>
+				<div class="route">
+					api/v1/words/all
+				</div>
+				<div class="desc">
+					&#8594; GET ALL WORDS
+				</div>
+			</div>
+			<div class="endpoint">
+				<div class="req">
+					[GET]
+				</div>
+				<div class="route">
+					api/v1//words/limit/:limit
+				</div>
+				<div class="desc">
+					&#8594; GET WORDS BY LIMIT [number 1-14476]
+				</div>
+			</div>
+			<div class="endpoint">
+				<div class="req">
+					[GET]
+				</div>
+				<div class="route">
+					api/v1//words/random/all
+				</div>
+				<div class="desc">
+					&#8594; GET ALL RANDOM WORDS
+				</div>
+			</div>
+			<div class="endpoint">
+				<div class="req">
+					[GET]
+				</div>
+				<div class="route">
+					api/v1//words/random/:limit
+					</div>
+				<div class="desc">
+					&#8594; GET RANDOM WORDS BY LIMIT [number 1-14476]
+				</div>
+			</div>
+			<div class="endpoint">
+				<div class="req">
+					[GET]
+				</div>
+				<div class="route">
+					api/v1/words/id/:id
+				</div>
+				<div class="desc">
+					&#8594; GET A SPECIFIC WORD BY OBJECT_ID
+				</div>
+			</div>
+		</div>
+
 		<div class="info">
-			Retruns the selected number of JSON word objects "word": [{ "_id":"{OBJECT_ID}","word":"{WORD}" }]"
+			Returns the result of word objects in JSON-format as "word": [{ "_id":"{OBJECT_ID}","word":"{WORD}" }]"
 		</div>
 	</body>
 </html>
