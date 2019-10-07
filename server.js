@@ -1,12 +1,12 @@
 // Init express app
-const cors = require("cors");
 const express = require("express");
+const cors = require("cors");
 const app = express();
-
-const db = require("./api/config/database");
 
 // Use CORS middleware
 app.use(cors());
+
+const db = require("./api/config/database");
 
 // Init dotenv for server variables
 const dotenv = require('dotenv');
