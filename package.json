@@ -4,6 +4,7 @@
   "description": "A simple REST API which returns Retro Computer type words.",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -19,11 +20,14 @@
     "eslint-plugin-react-hooks": "^1.7.0"
   },
   "dependencies": {
+    "bcrypt": "^3.0.6",
     "cors": "^2.8.5",
     "dotenv": "^8.1.0",
     "eslint-config-prettier": "^6.3.0",
     "express": "^4.17.1",
     "express-validator": "^6.2.0",
-    "mongoose": "^5.7.1"
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.1",
+    "passport": "^0.4.0"
   }
 }

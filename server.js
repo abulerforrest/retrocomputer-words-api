@@ -1,7 +1,9 @@
 // Init express app
-const express = require("express");
-const cors = require('cors');
 const app = express();
+const cors = require("cors");
+const express = require("express");
+
+const db = require("./api/config/database");
 
 // Use CORS middleware
 app.use(cors());
@@ -13,31 +15,15 @@ dotenv.config();
 // Setting port recognision server or local
 const port = process.env.PORT || 3000;
 
-// ExpressValidator
-require("express-validator")
+// Express validator
+require("express-validator");
 
-// MongoDB
-mongoose = require('mongoose');
+db.on('error', () => {
+	console.error("Couldn't connect to the database ;(");
+});
 
 // BodyParser
-bodyParser = require('body-parser');
-
-mongoose.Promise = global.Promise;
-
-// Connect string to MongoDB
-const mongoConnect = 
-`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PW}@${process.env.CLUSTER}/${process.env.DB_NAME}?retryWrites=true&w=majority`;
-
-mongoose.connect(mongoConnect,
-	{
-		useNewUrlParser: true,
-		useUnifiedTopology: true
-	}
-);
-
-const db = mongoose.connection;
-
-db.on('error', () => { console.log("error!")});
+const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -59,7 +45,7 @@ app.get('/', (req, res) => {
 	res.redirect('/api/v1');
 });
 
-// Default Endpoint, show index
+// Default endpoint, launch index.html
 app.get("/api/v1/", function (req, res) {
 	res.sendFile(__dirname + "/public/index.html");
 });

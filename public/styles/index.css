@@ -38,6 +38,7 @@ body {
 		0 0 75px rgb(3, 195, 238);
 	-webkit-filter: blur(0);
 }
+
 .heading:hover {
 	filter: blur(2px);
 }
@@ -74,12 +75,15 @@ body {
 	user-select: none;
 	font-size: 26px;
 }
+
 .route {
+	font-size: 25px;
 	margin: 0;
 	white-space: nowrap;
 	color: rgb(3, 195, 238);
 	background: #333c44;
 }
+
 .desc {
 	height: 50px;
 	display: flex;
@@ -109,7 +113,6 @@ body {
 	user-select: none;
 	padding: 8px 25px 8px 25px;
 	border: 4px solid rgb(3, 195, 238);
-
 }
 
 .bold {
