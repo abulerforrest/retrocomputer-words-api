@@ -1,7 +1,7 @@
 // Init express app
-const app = express();
 const cors = require("cors");
 const express = require("express");
+const app = express();
 
 const db = require("./api/config/database");
 
