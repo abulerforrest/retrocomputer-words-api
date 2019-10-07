@@ -25,7 +25,7 @@
 			<i>Antic</i>, <i>Compute!</i>, <i>Analog Computing Video And Arcade Games</i>, <i>Hi-Res Magazine</i>, <i>ROM Magazine</i> etc. <br />(Source: <a href="https://www.atarimagazines.com">https://www.atarimagazines.com</a>)
 			I've also crawled words from video game lists such as classic Nintendo, Atari games and from Wikipedia pages regarding computer technology/science.
 			<br/><br/>
-			<span class="bold">So, why the effort setting up this API?</span>
+			<span class="bold">So, why this effort to set up this API?</span>
 			<br /><br />
 			I'm currently working on a game called <a href="https://github.com/abulerforrest/wordrazer">Word Razer</a> which is a retro style word game that will use this API in order to serve its random words in the game.
 		</div>
@@ -88,6 +88,20 @@
 					&#8594; GET A SPECIFIC WORD BY OBJECT_ID
 				</div>
 			</div>
+		</div>
+		<h2>
+			Authentication
+		</h2>
+		<div class="descriptionText">
+			This API is open but does require authentication. To get access follow these steps:<br /><br />
+			1. Do a POST request to endpoint: api/v1/words/signin and include these body params:<br /><br />
+			username: "free",<br />
+			password: "access"
+			<br /><br>
+			2. Copy the returned token (which you get in the response - the token is valid for 1h)
+			<br /><br>
+			3. Then make the GET request (To any of the above routes) and include an Authorization header with value: 'Bearer {your token}'<br />
+			voila!
 		</div>
 
 		<div class="info">

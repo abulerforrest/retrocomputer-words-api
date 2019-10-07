@@ -8,7 +8,13 @@ You can query for all words or random words or also add a limit to how many resu
 
 The api sends back the result in JSON-format.
 
+# Live site
+
+The API is live at [retrocomputerwordsapi.alexdev.se](http://retrocomputerwordsapi.alexdev.se) to view it in the browser.
+
 # Getting started
+
+This API is open but does require authentication. To get access follow these steps:<br /><br /> 1. Do a `POST` request to endpoint: api/v1/words/signin and include these params to the body:<br /><br /> username: "free",<br /> password: "access" <br /><br> 2. Copy the returned token (which you get in the response - the token is valid for 1h) <br /><br> 3. Then make the `GET` request (To any of the available routes) and include an `Authorization` header with value: `Bearer {your token}`<br /> <b>voila!</b>
 
 ## Prerequisites
 
@@ -52,12 +58,12 @@ Using:
 * [MongoDB Atlas](https://www.mongodb.com/cloud/atlas/) -  Cloud MongoDB service
 * [Mongoose](https://mongoosejs.com/) - Mongodb object modeling for node.js
 * [Express-Validator](https://express-validator.github.io/) - Express validator Middleware
+* [JWT](https://jwt.io/) - For authentication
+* [bcrypt](https://github.com/kelektiv/node.bcrypt.js/) - For hashing
 
 ## Contributing
 
 Please read [CONTRIBUTING.md] for details on the code of conduct, and the process for submitting pull requests to this project.
-
-## Versioning
 
 ## Authors
 
