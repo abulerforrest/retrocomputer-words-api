@@ -8,10 +8,6 @@ const jwt = require('jsonwebtoken');
 // bcrypt
 const bcrypt = require("bcrypt");
 
-// dotenv
-const dotenv = require('dotenv');
-dotenv.config();
-
 // Get total count
 exports.getTotalCount = (req, res) => {
 	Word.countDocuments({}, (err, count) => {
